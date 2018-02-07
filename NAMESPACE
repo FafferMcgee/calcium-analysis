@@ -3,4 +3,5 @@
 export(integrateCurve)
 export(minmaxCalciumData)
 export(normalizeCalciumData)
+export(plotDRC)
 export(plotsCellCalciumData)
