@@ -15,7 +15,7 @@ plotDRC(dataframe, maxdose)
 A function that generates a dose-response curve for cellbased calcium data (or any multi-ROI based data).
 }
 \examples{
-plotDRC(longcellnormint.grp, 10)
+plotDRC(longcellnormint.group, 10)
 
 }
 \keyword{Calcium}
