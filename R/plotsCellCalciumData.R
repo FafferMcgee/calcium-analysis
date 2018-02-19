@@ -30,7 +30,7 @@ plotsCellCalciumData <- function(data, conditions = c(0), columns) {
     facet_wrap( ~ Region, ncol=columns) +
     theme(legend.position = "none") +
     xlab("Time(s)") +
-    ylab("Relative Intensity") +
+    ylab("Relative Intensity -- F - Fmin / Fmax - Fmin") +
     geom_vline(xintercept=conditions, alpha = 0.3) +
     scale_y_continuous(breaks = seq(0, 1, by=0.5), limits=c(0,1))
 
