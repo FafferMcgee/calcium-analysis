@@ -43,7 +43,7 @@ minmaxCalciumData <- function(file) {
   # Initial cleanup of data - removes time column and rawIntDen column leaving only Area and IntDen
   tempRawCalcium <- rawCalcium %>%
     dplyr::select(-1) %>%
-    dplyr::select(-1*seq(0,ncol(rawCalcium),3))
+    dplyr::select(-1*seq(2,ncol(rawCalcium),3))
 
 
   # Divides even column by odd columns to normalize intensity by area of the ROI used
