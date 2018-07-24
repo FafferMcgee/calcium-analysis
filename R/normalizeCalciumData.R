@@ -54,11 +54,11 @@ normalizeCalciumData <- function(file) {
 
   # Creates a long, tidy dataframe
   longNormInt <- normInt %>%
-    gather(key = Region, value = Intensity, starts_with('IntDen'))
+    gather(key = Region, value = Intensity, starts_with('RawIntDen'))
 
 
   # Rename the regions
-  longNormInt$Region <- gsub('IntDen','Cell ', longNormInt$Region)
+  longNormInt$Region <- gsub('RawIntDen','Cell ', longNormInt$Region)
 
 
   # Returns a list of the dataframes, normInt is good for checking analysis and will be wide

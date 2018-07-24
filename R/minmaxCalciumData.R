@@ -40,7 +40,7 @@ minmaxCalciumData <- function(file) {
   rawCalcium <- dplyr::slice(rawCalcium, 1:(nrow(rawCalcium)-1))
 
 
-  # Initial cleanup of data - removes time column and rawIntDen column leaving only Area and IntDen
+  # Initial cleanup of data - removes time column and rawIntDen column leaving only Area and RawIntDen
   tempRawCalcium <- rawCalcium %>%
     dplyr::select(-1) %>%
     dplyr::select(-1*seq(2,ncol(rawCalcium),3))
@@ -59,11 +59,11 @@ minmaxCalciumData <- function(file) {
 
   # Creates a long, tidy dataframe
   longNormInt <- normInt %>%
-    gather(key = Region, value = Intensity, starts_with('IntDen'))
+    gather(key = Region, value = Intensity, starts_with('RawIntDen'))
 
 
   # Rename the regions
-  longNormInt$Region <- gsub('IntDen','Cell ', longNormInt$Region)
+  longNormInt$Region <- gsub('RawIntDen','Cell ', longNormInt$Region)
 
 
   # Returns a list of the dataframes, normInt is good for checking analysis and will be wide
