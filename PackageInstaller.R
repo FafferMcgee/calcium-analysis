@@ -8,8 +8,6 @@ install.packages( c('devtools',
                    'lmtest',
                    'multcomp',
                    'plyr',
-                   'shiny',
-                   'rsconnect',
                    'knitr',
                    'data.table',
                    'Cairo'
