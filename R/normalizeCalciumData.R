@@ -42,11 +42,11 @@ normalizeCalciumData <- function(file) {
 
 
   # Divides even column by odd columns to normalize intensity by area of the ROI used
-  areaNormInt <- (tempRawCalcium[seq(0,ncol(tempRawCalcium),2)] / tempRawCalcium[seq(1,ncol(tempRawCalcium),2)])
+  integratedDensity <- (tempRawCalcium[seq(0,ncol(tempRawCalcium),2)] )
 
 
   # Normalizes intensities so it is on a scale of 0,1
-  normInt <- data.frame(lapply(areaNormInt, function(x) ((x-min(x))/(max(x)-min(x)))))
+  normInt <- data.frame(lapply(integratedDensity, function(x) ((x-min(x))/(max(x)-min(x)))))
 
   # Reintigrates time column
   normInt <- cbind(rawCalcium[1], normInt)
