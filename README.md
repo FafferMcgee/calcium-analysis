@@ -54,6 +54,10 @@ You can do this as follows:
 
 ![New Markdown](/figures/new-markdown.png)
 
+If you are using a markdown format as suggested, you will need to insert a new R chunk for each segment/step of code you wish to execute. You can do this as shown here:
+
+![New Chunk](/figures/insert-chunk.png)
+
 There are a number of packages that are needed for performing this analysis. They are as follows:
 
 ```R
@@ -69,7 +73,65 @@ library(drc)
 library(CalciumAnalsysis)
 ```
 
+That chunk of code is responsible for letting RStudio know to load those packages so that you can use them in your analysis. It should be the first chunk of code in your markdown file.
+
 If you don't have one of those packages installed, you can install it with the `install.packages('Package name')` command. For example, you would install ggplot2 with `install.packages('ggplot2')` 
 
 And if you wish to install multiple packages at once, you may install them as a list: `install.packages(c('ggplot2', 'dplyr', 'tidyr'))`
 
+## Running a chunk of code.
+
+For each chunk of code, there is a green 'play' triangle in the top right corner. Simply click that button to run the code in the chunk. Shown below:
+
+![Run Chunk](/figures/run-chunk.png)
+
+## Importing your data
+
+The next step is to import your data into RStudio so that you can work with it. 
+
+First, you should set the working directory with the `setwd('path/to/your/data/')` at the top of the chunk.
+
+Following that, we can read in and normalize the data all at once with the 'minmaxCalciumData' function. This function takes a single argument, which is your data file for a single experiment. This function takes your data as an input, and then it normalizes the fluorescence intensity for each cell based on the maximum and minimum fluorescence intensity for each ROI independently. The function returns a list of normalized data one in a 'wide' format and another in a 'long' format.
+
+It is used as follows: 
+```
+Experiment23CalciumData <- minmaxCalciumData('Experiment23Data.csv')
+normalizedIntensity23 <- Experiment23CalciumData[[1]]
+longNormalizedIntensity23 <- Experiment23CalciumData[[2]]
+```
+
+Here is the difference between the wide and long data:
+
+**Insert Images Here**
+
+## Defining your condition change timepoints
+
+For calculating the DRC and for making clear plots that indicate when you changed the condition the cells were exposed to, you need to manually specify those time points (as frame #s - **THIS IS IMPORTANT**). Because the data in the CSV has no time coomponent, only frame #.
+
+To continue the example, I would specific the conditions for Experiment23 as follows:
+```
+conditions23 <- c(25, 100, 150, 225, 275, 350)
+```
+This would imply that I put it into the first condition at fram 25, and at frame 100 i began to wash it out. Then at frame 150, I moved to the second condition, and washed it out, etc. 
+
+## Plotting your data
+
+Now we are ready to plot the data and begin looking at it so we can qualitatively check to make sure the data is suitable for further analysis or additional cleaning. 
+
+I created a plotting function to cleanly plot data from each experiment. It is the function `plotsCellCalciumData(data, conditions, columns)`
+
+This function takes three arguments:
+1) your data in 'long' format e.g. longNormalizedIntensity23
+2) Your list of conditions e.g. conditions23
+3) The number of columns you want your figure to have e.g. 10
+
+It would like like this: `plotsCellCalciumData(longNormalizedIntensity23, conditions23, 10)`
+
+The number of columns you want to specify will depend upon the total number of ROIs you analyzed in that given movie. You can easily change the number and re-run the chunk of code to re-plot your data. 
+
+
+# Quantifying the strength of response
+
+....
+_**This will be added later**_
+....
