@@ -1,6 +1,6 @@
 library(dplyr)
 
-data <-  read.csv('file:///D:/CellBasedImaging/RezaLab/20190425MRS_WT_Casr_CalciumTitrations/Data/WholeImage_Calcium_Experiment139.csv')
+#data <-  read.csv('')
 
 averageWindow = 15
 
