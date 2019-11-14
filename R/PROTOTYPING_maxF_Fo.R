@@ -1,8 +1,8 @@
 library(dplyr)
 
-data <-  read.csv('file:///D:/CellBasedImaging/RezaLab/20190425MRS_WT_Casr_CalciumTitrations/Data/WholeImage_Calcium_Experiment139.csv')
+data <-  read.csv('file:///H:/CellBasedImaging/RezaLab/20190425MRS_WT_Casr_CalciumTitrations/Data/WholeImage_Calcium_Experiment139.csv')
 
-conditions <- c(averageWindow, 30, 50, 75, 95, 135, 155, 205, 225, 270, 290, 365, 385, 455, 475, 570, 590, 645, 665)
+conditions <- c(30, 50, 75, 95, 135, 155, 205, 225, 270, 290, 365, 385, 455, 475, 570, 590, 645, 665)
 
 data <- data %>%
   dplyr::select(X,IntDen1)
