@@ -21,7 +21,7 @@
 #'
 
 
-quantDeltaF_Fo <- function(data, conditions, averageWindow){
+quantF_Fo <- function(data, conditions, averageWindow){
   tempList <- list() # Need to declare empty list to store the data temporarily
   j=0
   for (i in seq(1,(length(conditions)-1),2)){
@@ -29,13 +29,9 @@ quantDeltaF_Fo <- function(data, conditions, averageWindow){
     j = j + 1
 
     response <-   ((mean(data[conditions[i]:conditions[i+1],4]) -
-                     mean(data[conditions[i]-averageWindow:conditions[i],4])) /
+                      mean(data[conditions[i]-averageWindow:conditions[i],4])) /
                      (mean(data[conditions[i]-averageWindow:conditions[i],4])))
 
-
-    if (response < 0){
-      response = 0
-    }
 
 
 
@@ -46,4 +42,3 @@ quantDeltaF_Fo <- function(data, conditions, averageWindow){
   return(data.frame(tempList))
 
 }
-
