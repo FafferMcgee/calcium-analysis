@@ -15,10 +15,4 @@ Normalizing first by an averaged background (Fo) right before stimulus corrects 
 
 
 Inputs:
-Data = Dataframe containing fluorescence intensity data
-Conditions = vectory of integers indicating when
-averageWindow = the window to use prior to stimulus for calculating Fo
-
-i = odd index of conditions (corresponds of start of new condition)
-j = index of response
 }
