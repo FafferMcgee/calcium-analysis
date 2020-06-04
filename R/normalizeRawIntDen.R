@@ -24,7 +24,7 @@
 
 
 
-normalizRawIntDen <- function(rawIntDen) {
+normalizeRawIntDen <- function(rawIntDen) {
 
 
   # Initial cleanup of data - removes time column and rawIntDen column leaving only Area and IntDen
