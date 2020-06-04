@@ -6,6 +6,9 @@
 \usage{
 normalizRawIntDen(rawIntDen)
 }
+\arguments{
+\item{rawIntDen}{Dataframe of raw integrated density data from Imagej}
+}
 \description{
 This function will take the data obtained from ImageJ time-series and normalize them to each ROI.
 It cleans up the data as well by removing the time column and rawIntDen column obtained from the ImageJ csv.
@@ -21,6 +24,11 @@ One is a standard wide-format that is easy to look at manually.
 The other is a 'long' format where the intensity data has been gathered under a key for the cell/ROI being analyzed.
 
 Normalization method: (x-min(x)) / (max(x)-min(x)
+}
+\examples{
+
+normCellData <-  normalizeRawIntDen(rawIntData)
+
 }
 \keyword{Calcium}
 \keyword{Imaging}
