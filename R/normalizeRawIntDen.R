@@ -15,8 +15,6 @@
 #' Normalization method: (x-min(x)) / (max(x)-min(x)
 #' @param rawIntDen Dataframe of raw integrated density data from Imagej
 #' @keywords Calcium Imaging
-#' @export
-#' @examples
 #'
 #' normCellData <-  normalizeRawIntDen(rawIntData)
 #'
@@ -24,7 +22,7 @@
 
 
 
-normalizRawIntDen <- function(rawIntDen) {
+normalizeRawIntDen <- function(rawIntDen) {
 
 
   # Initial cleanup of data - removes time column and rawIntDen column leaving only Area and IntDen
