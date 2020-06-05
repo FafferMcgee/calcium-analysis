@@ -15,7 +15,8 @@
 #' Normalization method: (x-min(x)) / (max(x)-min(x)
 #' @param rawIntDen Dataframe of raw integrated density data from Imagej
 #' @keywords Calcium Imaging
-#'
+#' @export
+#' @examples
 #' normCellData <-  normalizeRawIntDen(rawIntData)
 #'
 

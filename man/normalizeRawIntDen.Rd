@@ -25,8 +25,9 @@ The other is a 'long' format where the intensity data has been gathered under a 
 
 Normalization method: (x-min(x)) / (max(x)-min(x)
 }
-\keyword{<-}
+\examples{
+normCellData <-  normalizeRawIntDen(rawIntData)
+
+}
 \keyword{Calcium}
 \keyword{Imaging}
-\keyword{normCellData}
-\keyword{normalizeRawIntDen(rawIntData)}
