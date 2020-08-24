@@ -1,7 +1,6 @@
 # library(dplyr)
 #
 # # make sure no specific links to a file are uncommented before pushing to github
-# # data <-  read.csv('file:///H:/CellBasedImaging/RezaLab/20190425MRS_WT_Casr_CalciumTitrations/Data/WholeImage_Calcium_Experiment139.csv')
 #
 # conditions <- c(30, 50, 75, 95, 135, 155, 205, 225, 270, 290, 365, 385, 455, 475, 570, 590, 645, 665)
 #

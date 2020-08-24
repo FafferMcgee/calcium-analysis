@@ -9,15 +9,17 @@
 #'
 #'
 #' Inputs:
+<<<<<<< HEAD
 #' @param Data = Dataframe containing fluorescence intensity data
 #' @param Conditions = vectory of integers indicating when
 #' @param averageWindow = the window to use prior to stimulus for calculating Fo
+=======
+>>>>>>> master
 #'
 #' i = odd index of conditions (corresponds of start of new condition)
 #' j = index of response
 #'
 #'
-#' @export
 #'
 
 
