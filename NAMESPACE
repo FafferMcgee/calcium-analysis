@@ -3,6 +3,7 @@
 export(DeltafDivFoNormalizeData)
 export(fdeltafoNormalizeData)
 export(groupsData)
+export(importRawData)
 export(integrateCurve)
 export(integrateF_Fo)
 export(minmaxCalciumData)

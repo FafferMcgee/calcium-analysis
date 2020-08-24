@@ -6,6 +6,16 @@
 \usage{
 integrateF_Fo(data, conditions, averageWindow)
 }
+\arguments{
+\item{data}{= Dataframe containing fluorescence intensity data}
+
+\item{conditions}{= vectory of integers indicating when}
+
+\item{averageWindow}{= the window to use prior to stimulus for calculating Fo
+
+i = odd index of conditions (corresponds of start of new condition)
+j = index of response}
+}
 \description{
 It normalizes the intensity data during stimulus window by calculating an average Fo before stimulus, and then dviding the fluorescence values in this window by the background Fo.
 }
