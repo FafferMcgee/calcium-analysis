@@ -8,6 +8,8 @@ quantDeltaF_Fo(data, conditions, averageWindow)
 }
 \arguments{
 \item{averageWindow}{= the window to use prior to stimulus for calculating Fo
+=======
+>>>>>>> master
 
 i = odd index of conditions (corresponds of start of new condition)
 j = index of response}
@@ -25,7 +27,5 @@ Normalizing first by an averaged background (Fo) right before stimulus corrects 
 
 
 Inputs:
-
-i = odd index of conditions (corresponds of start of new condition)
-j = index of response
+<<<<<<< HEAD
 }

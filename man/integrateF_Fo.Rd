@@ -21,11 +21,4 @@ It normalizes the intensity data during stimulus window by calculating an averag
 }
 \details{
 Normalizing first by an averaged background (Fo) right before stimulus corrects for photobleaching/drift.
-
-
-
-Inputs:
-
-i = odd index of conditions (corresponds of start of new condition)
-j = index of response
 }

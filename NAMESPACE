@@ -4,11 +4,8 @@ export(DeltafDivFoNormalizeData)
 export(deltaF_AUC)
 export(fdeltafoNormalizeData)
 export(groupsData)
-<<<<<<< HEAD
 export(importRawData)
-=======
 export(importRawIntDen)
->>>>>>> master
 export(integrateCurve)
 export(minmaxCalciumData)
 export(normalizeCalciumData)
